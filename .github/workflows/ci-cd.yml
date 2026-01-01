@@ -25,7 +25,7 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: |
         curl -X POST \
-          "https://api.render.com/v1/services/srv-d5b8f2be5dus73fh8aig/deploys" \
+          "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys" \
           -H "Authorization: Bearer $RENDER_API_KEY" \
           -H "Content-Type: application/json"
       env:
