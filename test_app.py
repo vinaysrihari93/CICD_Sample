@@ -5,4 +5,4 @@ def test_hello_world():
     response = client.get('/')   # Visit the home page
 
     assert response.status_code == 200          # Should load successfully
-    assert b"Hello, World!" in response.data    # Should contain the text
+    assert b"Hello, World1!" in response.data    # Should contain the text
